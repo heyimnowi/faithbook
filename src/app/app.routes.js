@@ -18,6 +18,16 @@ angular.module('app-bootstrap').config([
             controllerAs: 'homeCtrl'
           }
         }
+      })
+      .state('event', {
+        url: '/event/{eventId}',
+        views: {
+          main: {
+            templateUrl: '../app/components/event/event.html',
+            controller: 'EventController',
+            controllerAs: 'eventCtrl'
+          }
+        }
       });
 
     $locationProvider.html5Mode(true);

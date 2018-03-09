@@ -4,38 +4,38 @@
 }
 
 .event-wrapper {
-  padding: 30px;
   background-color: white;
-  box-shadow: 0 0 11px 0 $black-translucent;
   border-radius: 5px;
-  width: 270px;
-  margin-bottom: 40px;
+  box-shadow: 0 0 11px 0 $black-translucent;
   cursor: pointer;
+  margin-bottom: 40px;
+  padding: 30px;
+  width: 260px;
 }
 
 .event-header {
-  padding-bottom: 40px;
-  margin-bottom: 20px;
   border-bottom: 1px solid $gray;
+  margin-bottom: 20px;
+  padding-bottom: 40px;
 }
 
 .event-date {
   background: $blue;
-  padding: 10px;
   border-radius: 100%;
-  text-align: center;
   color: $white;
-  margin-right: 10px;
-  width: 50px;
   height: 50px;
+  margin-right: 10px;
+  padding: 10px;
+  text-align: center;
+  width: 50px;
 
   span {
     color: $white;
 
     &:first-child {
       font-size: 20px;
-      margin-bottom: 2px;
       line-height: 20px;
+      margin-bottom: 2px;
     }
 
     &:last-child {

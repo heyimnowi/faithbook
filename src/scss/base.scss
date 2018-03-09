@@ -2,23 +2,38 @@
   @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
 }
 
+ p,
+ h1,
+ h2,
+ span {
+  color: $dark-gray;
+ }
+
 header {
-  height: 50px;
   background: $white;
-  padding: 10px 30px;
   box-shadow: 0 2px 4px $black-translucent;
+  height: 50px;
   margin-bottom: 100px;
+  padding: 10px 30px;
 }
 
 .search-bar {
   background-image: url('../assets/search.svg');
-  background-position-x: 0;
   background-repeat: no-repeat;
-  background-position-y: 15px;
-  margin-bottom: 30px;
   border-bottom: 1px solid $gray;
-  text-align: left;
-  padding-left: 50px;
   color: $gray;
   height: 50px;
+  margin-bottom: 30px;
+  padding-left: 50px;
+  text-align: left;
+
+  background-position-x: 0;
+  background-position-y: 15px;
+}
+
+.green-button {
+  background-color: $green;
+  color: $white;
+  padding: 10px 20px;
+  border-radius: 20px;
 }
