@@ -1,0 +1,42 @@
+.input-base {
+  border-bottom: 1px solid $gray;
+  padding: 10px;
+  color: $dark-gray;
+  margin-bottom: 20px;
+}
+
+.label-radio {
+  color: $dark-gray;
+}
+
+.signup-form {
+  width: 500px;
+}
+
+.gender-wrapper {
+  padding-left: 10px;
+}
+
+.profile-pic-upload {
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+  background-color: $gray;
+  background-image: url('../assets/upload.svg');
+  cursor: pointer;
+  margin: auto;
+  margin-bottom: 20px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.input-interest   {
+  margin-bottom: 10px;
+
+  label {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: $purple;
+    color: $white;
+  }
+}

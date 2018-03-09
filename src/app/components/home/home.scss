@@ -11,6 +11,18 @@
   margin-bottom: 40px;
   padding: 30px;
   width: 260px;
+  position: relative;
+
+  .add-button {
+    position: absolute;
+    right: -20px;
+    bottom: -20px;
+
+    img {
+      height: 40px;
+      width: 40px;
+    }
+  }
 }
 
 .event-header {
@@ -20,7 +32,7 @@
 }
 
 .event-date {
-  background: $blue;
+  background: $purple;
   border-radius: 100%;
   color: $white;
   height: 50px;
@@ -56,4 +68,29 @@
       font-weight: 300;
     }
   }
+}
+
+.profile-pic {
+  max-width: 60px;
+  max-height: 60px;
+  margin-right: 10px;
+  border-radius: 100%;
+}
+
+.interest-wrapper {
+  flex-wrap: wrap;
+}
+
+.interest {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: $purple;
+  color: $white;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+.religion {
+  color: $blue;
+  font-weight: 600;
 }

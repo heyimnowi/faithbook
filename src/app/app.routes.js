@@ -19,13 +19,43 @@ angular.module('app-bootstrap').config([
           }
         }
       })
-      .state('event', {
-        url: '/event/{eventId}',
+      .state('profile', {
+        url: '/profile/{profileId}',
         views: {
           main: {
-            templateUrl: '../app/components/event/event.html',
-            controller: 'EventController',
-            controllerAs: 'eventCtrl'
+            templateUrl: '../app/components/profile/profile.html',
+            controller: 'ProfileController',
+            controllerAs: 'profileCtrl'
+          }
+        }
+      })
+      .state('signup', {
+        url: '/signup',
+        views: {
+          main: {
+            templateUrl: '../app/components/signup/signup.html',
+            controller: 'SignUpController',
+            controllerAs: 'signUpCtrl'
+          }
+        }
+      })
+      .state('connections', {
+        url: '/connections',
+        views: {
+          main: {
+            templateUrl: '../app/components/connections/connections.html',
+            controller: 'ConnectionsController',
+            controllerAs: 'connectionsCtrl'
+          }
+        }
+      })
+      .state('me', {
+        url: '/me',
+        views: {
+          main: {
+            templateUrl: '../app/components/me/me.html',
+            controller: 'ProfileController',
+            controllerAs: 'profileCtrl'
           }
         }
       });

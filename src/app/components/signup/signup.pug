@@ -1,0 +1,57 @@
+.column.column-center
+  h1.title-regular.m-bottom-5
+    | Sign up
+  form.column.signup-form.m-bottom-3
+    div.profile-pic-upload(class="button" ngf-select ng-model="file" name="file" ngf-pattern="'image/*'"
+    ngf-accept="'image/*'" ngf-max-size="20MB" ngf-min-height="100"
+    ngf-resize="{width: 100, height: 100}")
+    .row
+      input.input-base.flex-1.m-right-1(placeholder="Name" type='text' required)
+      input.input-base.flex-1(placeholder="Email" type='email' required)
+    .row
+      input.input-base.flex-1.m-right-1(placeholder="Password" type='password' required)
+      input.input-base.flex-1(placeholder="Confirm password" type='password' required)
+    .row
+      input.input-base.flex-1.m-right-1(placeholder="Religion" type='text' required)
+      input.input-base.flex-1(placeholder="City" type='text' name='city' required)
+    span.m-bottom-2
+      | Gender
+    .row.m-bottom-2.gender-wrapper
+      .row.m-right-3
+        input.m-right-1.input-radio(type='radio' name='female' required value="Female")
+        label.label-radio
+          | Female
+      .row
+        input.m-right-1.input-radio(type='radio' name='male' required value="Male")
+        label.label-radio
+          | Male
+    span.m-bottom-2
+      | Interests
+    .row.interest-wrapper-input
+      .row.input-interest  
+        input.m-right-1(type="checkbox" value='arts')
+        label
+          | #arts
+      .row.input-interest  
+        input.m-right-1(type="checkbox" value='arts')
+        label
+          | #music
+      .row.input-interest  
+        input.m-right-1(type="checkbox" value='arts')
+        label
+          | #sports
+      .row.input-interest  
+        input.m-right-1(type="checkbox" value='arts')
+        label
+          | #food
+      .row.input-interest  
+        input.m-right-1(type="checkbox" value='arts')
+        label
+          | #sleep
+      .row.input-interest  
+        input.m-right-1(type="checkbox" value='arts')
+        label
+          | #dogs
+  button.green-button
+    | Submit
+      

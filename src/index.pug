@@ -8,12 +8,12 @@ html(lang='en')
     link(href='/css/vendor.css' rel='stylesheet')
     link(href='/css/application.css' rel='stylesheet')
     base(href='/')
-  body(ng-app='app-bootstrap' ng-strict-di)
+  body(ng-app='app-bootstrap' class="{{ stateName }}" ng-strict-di)
     header.row.row-space-between
       p
         | GodSquad
       p
-        | Create event
+        | Sign up
     .max-width-container(ui-view='main')
     // inject:js
     // endinject

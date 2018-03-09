@@ -2,6 +2,7 @@ angular.module(
   'app-bootstrap', [
     'ui.router',
     'LocalStorageModule',
-    'pascalprecht.translate'
+    'pascalprecht.translate',
+    'ngFileUpload'
   ]
 );
