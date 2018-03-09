@@ -9,6 +9,11 @@ html(lang='en')
     link(href='/css/application.css' rel='stylesheet')
     base(href='/')
   body(ng-app='app-bootstrap' ng-strict-di)
-    div(ui-view='main')
+    header.row.row-space-between
+      p
+        | GodSquad
+      p
+        | Create event
+    .max-width-container(ui-view='main')
     // inject:js
     // endinject
