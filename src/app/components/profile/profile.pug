@@ -1,8 +1,9 @@
 .column.m-right-3.flex-3.profile-container
   .profile-section.event-detail-header.column
     .row.row-top.card.m-bottom-5
-      img.profile-pic-big(src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg")
-      .column
+      .profile-pic-big.flex-1
+        img(src="{{profileCtrl.user.image}}")
+      .column.flex-3
         .row.row-space-between.row-top
           h1.title-regular.m-bottom-1
             | {{ profileCtrl.user.name }}. 24

@@ -3,21 +3,23 @@
     | My connections
   .column
     .row.events-wrapper
-      .column.event-wrapper(ng-repeat='user in connectionCtrl.users' ui-sref='profile({profileId: user["_id"]})')
+      .column.event-wrapper
         .row.event-header
-          img.profile-pic(src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg")
+          img.profile-pic(src="https://i.imgur.com/V8IcHIl.png")
           .column.event-info
             span.event-title
-              | {{ user.name }}
+              | Francesca Russo
             span.religion.m-bottom-1
-              | {{ user.religion }}
+              | Catholic
             .row
               img.m-right-1(src="assets/pin.svg")
               span.event-location
-                | {{ user.city }}
+                | Rome
         .row.event-atendee.row-space-between
           .row.interest-wrapper
-            span.interest(ng-repeat='interest in user.interests')
-              | # {{ interest }}
-        button.add-button
-          img(src="assets/add.svg") 
+            span.interest
+              | #good coffee
+            span.interest
+              | #books
+            span.interest
+              | #travelling

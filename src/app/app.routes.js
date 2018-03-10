@@ -19,6 +19,16 @@ angular.module('app-bootstrap').config([
           }
         }
       })
+      .state('landing', {
+        url: '/',
+        views: {
+          main: {
+            templateUrl: '../app/components/landing/landing.html',
+            controller: 'HomeController',
+            controllerAs: 'homeCtrl'
+          }
+        }
+      })
       .state('profile', {
         url: '/profile/{profileId}',
         views: {

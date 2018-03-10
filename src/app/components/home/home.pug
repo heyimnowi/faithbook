@@ -1,11 +1,12 @@
-.column(ng-if='!loggedUser')
-  | welcome to faithbook
-.column(ng-if='loggedUser')
+.column(ng-show='!loggedUser')
+  | Faithbook
+.column(ng-show='loggedUser')
   input.search-bar(placeholder="Search...")
   .row.events-wrapper
     .column.event-wrapper(ng-repeat='user in homeCtrl.users' ui-sref='profile({profileId: user["_id"]})')
       .row.event-header
-        img.profile-pic(src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg")
+        .profile-pic
+          img(src="{{user.image}}")
         .column.event-info
           span.event-title
             | {{ user.name }}

@@ -6,5 +6,8 @@ module.exports = [
   'ng-file-upload/dist/ng-file-upload.min.js',
   'jquery/dist/jquery.min.js',
   'slick-carousel/slick/slick.min.js',
-  'angular-slick/dist/slick.js'
+  'angular-slick/dist/slick.js',
+  'js/charming.min.js',
+  'js/anime.min.js',
+  'js/wordFx.js'
 ];

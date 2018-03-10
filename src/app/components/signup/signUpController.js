@@ -15,8 +15,13 @@ angular.module('app-bootstrap').controller('SignUpController', [ 'Upload', '$roo
     		"gender":"female",
     		"city":"Rome",
     		"bio":"I just moved to Rome a month ago and I want to find out more about the culture and religion here.",
-    		"buddyList":[],
+        "buddyList": [
+          "5aa36e9cc191c466989b9323",
+          "5aa36c7b8a9618655defbf16",
+          "5aa36e485261dc6678d4c5ab"
+        ],
     		"birthAge":"11.07.1980",
+        "_id": "5aa372106c772d673b08bc5a"
       }
 
       $state.go('home');

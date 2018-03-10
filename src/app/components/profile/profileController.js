@@ -11,6 +11,7 @@ angular.module('app-bootstrap').controller('ProfileController', [ '$state', '$ro
     this.requestSent = false;
 
     this.sendRequest = () => {
+      userService.makeCall('4252692128');
       this.requestSent = true;
     }
 

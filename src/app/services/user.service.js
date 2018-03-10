@@ -1,6 +1,6 @@
 angular.module('app-bootstrap').factory('userService', [
-  '$http',
-  function ($http) {
+  '$http', '$location',
+  function ($http, $location) {
 
     return {
       // Get the metadata for an artist. Includes biography
@@ -21,6 +21,9 @@ angular.module('app-bootstrap').factory('userService', [
         };
         return $http.post('http://localhost:9000/requestUser', requestInfo );
       },
+      makeCall: (phoneNumber) => {
+        return $http.post('http://localhost:9000/makeCall', { to: phoneNumber, body: $location.$$absUrl } );
+      }
     };
 
   }]);
