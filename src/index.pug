@@ -14,7 +14,7 @@ html(lang='en')
       p.blue-text(ng-if='!loggedUser' ui-sref='signup')
         | SIGN UP
       .row(ng-if='loggedUser')
-        button.blue-text.m-right-1
+        button.blue-text.m-right-1(ui-sref='connections')
           | My connections
         button.blue-text(ui-sref='profile({ profileId: loggedUser["_id"]})')
           | {{ loggedUser.name }}
