@@ -1,6 +1,6 @@
 .column.m-right-3.flex-3.profile-container
-  .profile-section.event-detail-header
-    .row.row-top
+  .profile-section.event-detail-header.column
+    .row.row-top.card.m-bottom-5
       img.profile-pic-big(src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg")
       .column
         .row.row-space-between.row-top
@@ -26,3 +26,19 @@
             | #sports
         p.body-light
           | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rhoncus, nibh et feugiat ullamcorper, leo dui euismod risus, consequat fringilla nulla nisl quis metus. Cras magna nibh, aliquet placerat sagittis in, rhoncus sed elit. Sed et tempus urna. Integer sit amet nulla lacinia, pretium leo ac, efficitur odio. Duis sed auctor urna, vel lacinia dolor. Aliquam lacus diam, malesuada ultricies ante sed, gravida viverra orci. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis fringilla massa vitae elementum pulvinar. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi pellentesque lacus in dictum dapibus. 
+    .card.colum.column-center.testimonials-section(settings="profileCtrl.slickConfig")
+      h1.title-regular.m-bottom-1
+        | Testimonials
+      slick(autoplay='true')
+        .testimonial-wrapper
+          img(src="https://avatars1.githubusercontent.com/u/7938095?s=460&v=4" alt="")
+          span.name
+            | Noelia Lopez
+          span.review
+            | "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        .testimonial-wrapper
+          img(src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaB9mCGzzPIOhyXazbnl_7EY4_cJLU0FlKSHizku921ufB4EXhiQ" alt="")
+          span.name
+            | John Doe
+          span.review
+            | "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."

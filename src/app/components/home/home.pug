@@ -1,4 +1,6 @@
-.column
+.column(ng-if='$root.loggedUser === undefined')
+  | welcome to faithbook
+.column(ng-if='$root.loggedUser !== undefined')
   input.search-bar(placeholder="Search...")
   .row.events-wrapper
     .column.event-wrapper

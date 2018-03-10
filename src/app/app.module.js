@@ -3,6 +3,7 @@ angular.module(
     'ui.router',
     'LocalStorageModule',
     'pascalprecht.translate',
-    'ngFileUpload'
+    'ngFileUpload',
+    'slick'
   ]
 );

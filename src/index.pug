@@ -1,19 +1,21 @@
 doctype html
 html(lang='en')
   head
-    title Interfaith
+    title faithbook
     meta(charset='UTF-8')
     meta(name='viewport'
       content='width=device-width, initial-scale=1')
     link(href='/css/vendor.css' rel='stylesheet')
     link(href='/css/application.css' rel='stylesheet')
-    base(href='/')
+    link(rel="icon" href="assets/favicon.png")
+  base(href='/')
   body(ng-app='app-bootstrap' class="{{ stateName }}" ng-strict-di)
     header.row.row-space-between
-      p
-        | GodSquad
-      p
-        | Sign up
+      img.logo(src="assets/logo.svg" ui-sref='home')
+      p.blue-text(ng-if='!loggedUser' ui-sref='signup')
+        | SIGN UP
+      button.blue-text(ng-if='loggedUser' )
+        | My profile
     .max-width-container(ui-view='main')
     // inject:js
     // endinject

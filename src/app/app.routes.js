@@ -58,6 +58,16 @@ angular.module('app-bootstrap').config([
             controllerAs: 'profileCtrl'
           }
         }
+      })
+      .state('login', {
+        url: '/login',
+        views: {
+          main: {
+            templateUrl: '../app/components/login/login.html',
+            controller: 'LoginController',
+            controllerAs: 'loginCtrl'
+          }
+        }
       });
 
     $locationProvider.html5Mode(true);
