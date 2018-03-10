@@ -4,8 +4,8 @@ angular.module('app-bootstrap').factory('userService', [
 
     return {
       // Get the metadata for an artist. Includes biography
-      getProfileInfo: (user) => {
-        return $http.post('http://localhost:9000/profileInfo', { userId: 1 });
+      getProfileInfo: (profileId) => {
+        return $http.post('http://localhost:9000/profileInfo', { userId: profileId });
       },
       getUsers: (city, religion) => {
         const requestInfo = {

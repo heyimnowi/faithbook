@@ -5,7 +5,7 @@
       .column
         .row.row-space-between.row-top
           h1.title-regular.m-bottom-1
-            | Isaia Greco. 24
+            | {{ profileCtrl.user.name }}. 24
           button.green-button(ng-click='profileCtrl.sendRequest()' ng-class='{ "request-button-sent": profileCtrl.requestSent}')
             span(ng-if='!profileCtrl.requestSent')
               | Send request
@@ -14,18 +14,14 @@
         .row.m-bottom-3
           img.m-right-1(src="assets/pin.svg")
           span.event-location
-            | Rome
+            | {{ profileCtrl.user.city }}
         span.religion-title.m-bottom-1
-          | Catholic
+          | {{ profileCtrl.user.religion }}
         .row.interest-wrapper.m-bottom-3
-          span.interest
-            | #cooking
-          span.interest
-            | #tennis
-          span.interest
-            | #reading
+          span.interest(ng-repeat='interest in profileCtrl.user.interests')
+            | # {{ interest }}
         p.body-light
-          | I live in Rome with my wife and two daughters. I work as a programmer, in my free time I enjoy cooking various exotic dishes or playing tennis. I also really enjoy a good mystery novel. I was raised in a Catholic family and love to share various aspects of my religion with others.
+          | {{ profileCtrl.user.bio }}
     .card.colum.column-center.testimonials-section(settings="profileCtrl.slickConfig")
       h1.title-regular.m-bottom-1
         | Testimonials

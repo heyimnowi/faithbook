@@ -7,15 +7,17 @@ html(lang='en')
       content='width=device-width, initial-scale=1')
     link(href='/css/vendor.css' rel='stylesheet')
     link(href='/css/application.css' rel='stylesheet')
-    link(rel="icon" href="assets/favicon.png")
   base(href='/')
   body(ng-app='app-bootstrap' class="{{ stateName }}" ng-strict-di)
     header.row.row-space-between
       img.logo(src="assets/logo.svg" ui-sref='home')
       p.blue-text(ng-if='!loggedUser' ui-sref='signup')
         | SIGN UP
-      button.blue-text(ng-if='loggedUser' )
-        | {{ loggedUser.name }}
+      .row(ng-if='loggedUser')
+        button.blue-text.m-right-1
+          | My connections
+        button.blue-text(ui-sref='profile({ profileId: loggedUser["_id"]})')
+          | {{ loggedUser.name }}
     .max-width-container(ui-view='main')
     // inject:js
     // endinject
