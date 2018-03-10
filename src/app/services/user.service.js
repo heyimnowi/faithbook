@@ -13,7 +13,14 @@ angular.module('app-bootstrap').factory('userService', [
           religion: religion === undefined? '' : religion,
         };
         return $http.post('http://localhost:9000/filter', requestInfo );
-      }
+      },
+      requestUser: (from, to) => {
+        const requestInfo = {
+          from,
+          to,
+        };
+        return $http.post('http://localhost:9000/requestUser', requestInfo );
+      },
     };
 
   }]);

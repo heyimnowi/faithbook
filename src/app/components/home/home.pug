@@ -3,22 +3,21 @@
 .column(ng-if='!loggedUser')
   input.search-bar(placeholder="Search...")
   .row.events-wrapper
-    //TODO: change information
-    .column.event-wrapper(ng-repeat='user in homeCtrl.users')
+    .column.event-wrapper(ng-repeat='user in homeCtrl.users' ui-sref='profile({profileId: 1})')
       .row.event-header
         img.profile-pic(src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg")
         .column.event-info
           span.event-title
-            | John Doe
+            | {{ user.name }}
           span.religion.m-bottom-1
-            | Religion
+            | {{ user.religion }}
           .row
             img.m-right-1(src="assets/pin.svg")
             span.event-location
-              | Bs. As.
+              | {{ user.city }}
       .row.event-atendee.row-space-between
         .row.interest-wrapper
           span.interest(ng-repeat='interest in user.interests')
-            | #art
+            | # {{ interest }}
       button.add-button
         img(src="assets/add.svg") 

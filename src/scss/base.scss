@@ -45,6 +45,19 @@ header {
   color: $white;
   padding: 10px 20px;
   border-radius: 20px;
+
+  &:hover {
+    transform: scale(1.1);
+    animation: all 0.25 ease-out;
+  }
+
+  span {
+    color: $white;
+  }
+}
+
+.green-button.request-button-sent {
+  background-color: $gray;
 }
 
 .footer {
