@@ -1,31 +1,18 @@
-angular.module('app-bootstrap').controller('ProfileController', [ '$state', '$rootScope', 'userService',
-  function ($state, $rootScope, userService) {
+angular.module('app-bootstrap').controller('ProfileController', [ '$state', '$rootScope', 'userService', '$scope', '$stateParams',
+  function ($state, $rootScope, userService, $scope, $stateParams) {
 
-    userService.getProfileInfo();
+    userService.getProfileInfo($stateParams.profileId).then((response) => {
+      this.user = response.data;
+    });
+
 
     $rootScope.stateName = $state.current.name;
 
-    this.testimonials = [{
-      photo: 'https://avatars1.githubusercontent.com/u/7938095?s=460&v=4',
-      name: 'Noelia Lopez',
-      review: "Lorem ipsum"
-    },{
-      photo: 'https://avatars1.githubusercontent.com/u/7938095?s=460&v=4',
-      name: 'Noelia Lopez',
-      review: "Lorem ipsum"
-    },{
-      photo: 'https://avatars1.githubusercontent.com/u/7938095?s=460&v=4',
-      name: 'Noelia Lopez',
-      review: "Lorem ipsum"
-    },{
-      photo: 'https://avatars1.githubusercontent.com/u/7938095?s=460&v=4',
-      name: 'Noelia Lopez',
-      review: "Lorem ipsum"
-    },{
-      photo: 'https://avatars1.githubusercontent.com/u/7938095?s=460&v=4',
-      name: 'Noelia Lopez',
-      review: "Lorem ipsum"
-    }];
+    this.requestSent = false;
+
+    this.sendRequest = () => {
+      this.requestSent = true;
+    }
 
     this.slickConfig = {
       enabled: true,

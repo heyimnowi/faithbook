@@ -23,6 +23,11 @@
       width: 40px;
     }
   }
+
+  &:hover {
+    transform: scale(1.05);
+    transition: all 0.1s ease-out;
+  }
 }
 
 .event-header {
@@ -62,6 +67,7 @@
     &.event-title {
       font-size: 20px;
       margin-bottom: 10px;
+      line-height: 20px;
     }
 
     &.event-location {

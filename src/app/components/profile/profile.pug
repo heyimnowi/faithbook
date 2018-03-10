@@ -5,27 +5,23 @@
       .column
         .row.row-space-between.row-top
           h1.title-regular.m-bottom-1
-            | John Doe. 44
-          img.add-button(src="assets/add.svg")
+            | {{ profileCtrl.user.name }}. 24
+          button.green-button(ng-click='profileCtrl.sendRequest()' ng-class='{ "request-button-sent": profileCtrl.requestSent}')
+            span(ng-if='!profileCtrl.requestSent')
+              | Send request
+            span(ng-if='profileCtrl.requestSent')
+              | Request sent
         .row.m-bottom-3
           img.m-right-1(src="assets/pin.svg")
           span.event-location
-            | Bs. As.
+            | {{ profileCtrl.user.city }}
         span.religion-title.m-bottom-1
-          | Religion  
+          | {{ profileCtrl.user.religion }}
         .row.interest-wrapper.m-bottom-3
-          span.interest
-            | #art
-          span.interest
-            | #music
-          span.interest
-            | #sports
-          span.interest
-            | #music
-          span.interest
-            | #sports
+          span.interest(ng-repeat='interest in profileCtrl.user.interests')
+            | # {{ interest }}
         p.body-light
-          | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rhoncus, nibh et feugiat ullamcorper, leo dui euismod risus, consequat fringilla nulla nisl quis metus. Cras magna nibh, aliquet placerat sagittis in, rhoncus sed elit. Sed et tempus urna. Integer sit amet nulla lacinia, pretium leo ac, efficitur odio. Duis sed auctor urna, vel lacinia dolor. Aliquam lacus diam, malesuada ultricies ante sed, gravida viverra orci. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis fringilla massa vitae elementum pulvinar. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi pellentesque lacus in dictum dapibus. 
+          | {{ profileCtrl.user.bio }}
     .card.colum.column-center.testimonials-section(settings="profileCtrl.slickConfig")
       h1.title-regular.m-bottom-1
         | Testimonials

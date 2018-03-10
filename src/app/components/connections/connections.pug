@@ -3,195 +3,21 @@
     | My connections
   .column
     .row.events-wrapper
-      .column.event-wrapper
+      .column.event-wrapper(ng-repeat='user in connectionCtrl.users' ui-sref='profile({profileId: user["_id"]})')
         .row.event-header
           img.profile-pic(src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg")
           .column.event-info
             span.event-title
-              | John Doe
+              | {{ user.name }}
             span.religion.m-bottom-1
-              | Religion
+              | {{ user.religion }}
             .row
               img.m-right-1(src="assets/pin.svg")
               span.event-location
-                | Bs. As.
+                | {{ user.city }}
         .row.event-atendee.row-space-between
           .row.interest-wrapper
-            span.interest
-              | #art
-            span.interest
-              | #music
-            span.interest
-              | #sports
-            span.interest
-              | #music
-            span.interest
-              | #sports        
-      .column.event-wrapper
-        .row.event-header
-          img.profile-pic(src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg")
-          .column.event-info
-            span.event-title
-              | John Doe
-            span.religion.m-bottom-1
-              | Religion
-            .row
-              img.m-right-1(src="assets/pin.svg")
-              span.event-location
-                | Bs. As.
-        .row.event-atendee.row-space-between
-          .row.interest-wrapper
-            span.interest
-              | #art
-            span.interest
-              | #music
-            span.interest
-              | #sports
-            span.interest
-              | #music
-            span.interest
-              | #sports
-      .column.event-wrapper
-        .row.event-header
-          img.profile-pic(src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg")
-          .column.event-info
-            span.event-title
-              | John Doe
-            span.religion.m-bottom-1
-              | Religion
-            .row
-              img.m-right-1(src="assets/pin.svg")
-              span.event-location
-                | Bs. As.
-        .row.event-atendee.row-space-between
-          .row.interest-wrapper
-            span.interest
-              | #art
-            span.interest
-              | #music
-            span.interest
-              | #sports
-            span.interest
-              | #music
-            span.interest
-              | #sports        
-      .column.event-wrapper
-        .row.event-header
-          img.profile-pic(src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg")
-          .column.event-info
-            span.event-title
-              | John Doe
-            span.religion.m-bottom-1
-              | Religion
-            .row
-              img.m-right-1(src="assets/pin.svg")
-              span.event-location
-                | Bs. As.
-        .row.event-atendee.row-space-between
-          .row.interest-wrapper
-            span.interest
-              | #art
-            span.interest
-              | #music
-            span.interest
-              | #sports
-            span.interest
-              | #music
-            span.interest
-              | #sports          
-      .column.event-wrapper
-        .row.event-header
-          img.profile-pic(src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg")
-          .column.event-info
-            span.event-title
-              | John Doe
-            span.religion.m-bottom-1
-              | Religion
-            .row
-              img.m-right-1(src="assets/pin.svg")
-              span.event-location
-                | Bs. As.
-        .row.event-atendee.row-space-between
-          .row.interest-wrapper
-            span.interest
-              | #art
-            span.interest
-              | #music
-            span.interest
-              | #sports
-            span.interest
-              | #music
-            span.interest
-              | #sports        
-      .column.event-wrapper
-        .row.event-header
-          img.profile-pic(src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg")
-          .column.event-info
-            span.event-title
-              | John Doe
-            span.religion.m-bottom-1
-              | Religion
-            .row
-              img.m-right-1(src="assets/pin.svg")
-              span.event-location
-                | Bs. As.
-        .row.event-atendee.row-space-between
-          .row.interest-wrapper
-            span.interest
-              | #art
-            span.interest
-              | #music
-            span.interest
-              | #sports
-            span.interest
-              | #music
-            span.interest
-              | #sports
-      .column.event-wrapper
-        .row.event-header
-          img.profile-pic(src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg")
-          .column.event-info
-            span.event-title
-              | John Doe
-            span.religion.m-bottom-1
-              | Religion
-            .row
-              img.m-right-1(src="assets/pin.svg")
-              span.event-location
-                | Bs. As.
-        .row.event-atendee.row-space-between
-          .row.interest-wrapper
-            span.interest
-              | #art
-            span.interest
-              | #music
-            span.interest
-              | #sports
-            span.interest
-              | #music
-            span.interest
-              | #sports
-      .column.event-wrapper
-        .row.event-header
-          img.profile-pic(src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg")
-          .column.event-info
-            span.event-title
-              | John Doe
-            span.religion.m-bottom-1
-              | Religion
-            .row
-              img.m-right-1(src="assets/pin.svg")
-              span.event-location
-                | Bs. As.
-        .row.event-atendee.row-space-between
-          .row.interest-wrapper
-            span.interest
-              | #art
-            span.interest
-              | #music
-            span.interest
-              | #sports
-            span.interest
-              | #music
-            span.interest
-              | #sports
+            span.interest(ng-repeat='interest in user.interests')
+              | # {{ interest }}
+        button.add-button
+          img(src="assets/add.svg") 

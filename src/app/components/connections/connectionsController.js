@@ -1,7 +1,9 @@
-angular.module('app-bootstrap').controller('ConnectionsController', [
-  function () {
+angular.module('app-bootstrap').controller('ConnectionsController', [ '$rootScope', 'userService',
+  function ($rootScope, userService) {
 
-    this.component2Phrase = 'This event scren';
+    userService.getProfileInfo($rootScope.loggedUser["_id"]).then((response) => {
+      this.users = response.data.buddyList;
+    });
 
   }
 ]);
