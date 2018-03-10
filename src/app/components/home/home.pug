@@ -18,15 +18,7 @@
               | Bs. As.
       .row.event-atendee.row-space-between
         .row.interest-wrapper
-          span.interest
+          span.interest(ng-repeat='interest in user.interests')
             | #art
-          span.interest
-            | #music
-          span.interest
-            | #sports
-          span.interest
-            | #music
-          span.interest
-            | #sports
       button.add-button
         img(src="assets/add.svg") 
