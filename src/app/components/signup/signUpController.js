@@ -1,5 +1,5 @@
-angular.module('app-bootstrap').controller('SignUpController', [ 'Upload',
-  function (Upload) {
+angular.module('app-bootstrap').controller('SignUpController', [ 'Upload', '$rootScope', '$state',
+  function (Upload, $rootScope, $state) {
 
     this.component2Phrase = 'This event scren';
 

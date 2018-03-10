@@ -15,7 +15,7 @@ html(lang='en')
       p.blue-text(ng-if='!loggedUser' ui-sref='signup')
         | SIGN UP
       button.blue-text(ng-if='loggedUser' )
-        | My profile
+        | {{ loggedUser.name }}
     .max-width-container(ui-view='main')
     // inject:js
     // endinject

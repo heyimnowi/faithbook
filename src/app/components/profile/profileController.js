@@ -1,7 +1,6 @@
 angular.module('app-bootstrap').controller('ProfileController', [ '$state', '$rootScope', 'userService',
   function ($state, $rootScope, userService) {
 
-    debugger;
     userService.getProfileInfo();
 
     $rootScope.stateName = $state.current.name;
