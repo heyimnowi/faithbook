@@ -1,7 +1,10 @@
-angular.module('app-bootstrap').controller('HomeController', [
-  function () {
+angular.module('app-bootstrap').controller('HomeController', [ 'userService',
+  function (userService) {
 
-    this.component2Phrase = 'This home feed';
+    userService.getUsers().then((response) => {
+      this.users = response;
+      console.log(response.data);
+    });
 
   }
 ]);

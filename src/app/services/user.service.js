@@ -12,7 +12,7 @@ angular.module('app-bootstrap').factory('userService', [
           city: city === undefined? '' : city,
           religion: religion === undefined? '' : religion,
         };
-        return $http.post('http://localhost:9000/profileInfo', { userId: 1 });
+        return $http.post('http://localhost:9000/filter', requestInfo );
       }
     };
 
