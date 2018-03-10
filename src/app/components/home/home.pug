@@ -1,5 +1,7 @@
-.column(ng-show='!loggedUser')
-  | Faithbook
+.column.column-center.welcome(ng-show='!loggedUser')
+  h1.m-bottom-3
+    | Welcome to
+  img(src="assets/faithbook.svg")
 .column(ng-show='loggedUser')
   input.search-bar(placeholder="Search...")
   .row.events-wrapper
